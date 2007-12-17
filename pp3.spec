@@ -6,7 +6,6 @@ License: MIT
 Group: Sciences/Astronomy
 Source: http://prdownloads.sourceforge.net/pp3/pp3-%{version}.tar.bz2
 url: http://pp3.sourceforge.net
-BuildRoot: %{_tmppath}/%{name}-root
 
 %description
 PP3 creates celestial charts. It generates resolution independent
