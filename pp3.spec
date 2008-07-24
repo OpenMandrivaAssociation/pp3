@@ -1,7 +1,7 @@
 Summary: Creation of sky charts in Postscript or PDF format
 Name: pp3
 Version: 1.3.3
-Release: %mkrel 3
+Release: %mkrel 5
 License: MIT
 Group: Sciences/Astronomy
 Source: http://prdownloads.sourceforge.net/pp3/pp3-%{version}.tar.bz2
