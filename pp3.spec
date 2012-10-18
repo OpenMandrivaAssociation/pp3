@@ -4,9 +4,9 @@ Version: 1.3.3
 Release: %mkrel 7
 License: MIT
 Group: Sciences/Astronomy
-Source: http://prdownloads.sourceforge.net/pp3/pp3-%{version}.tar.bz2
-url: http://pp3.sourceforge.net
-BuildRoot: %{_tmppath}/%{name}-root
+Source0: http://prdownloads.sourceforge.net/pp3/pp3-%{version}.tar.bz2
+Url: http://pp3.sourceforge.net
+Patch0:	gcc47.patch
 
 %description
 PP3 creates celestial charts. It generates resolution independent
@@ -21,6 +21,7 @@ configurable in many ways.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %make LOCAL="" CHANGEFILE=fmax.ch CXXFLAGS="$RPM_OPT_FLAGS"
@@ -33,14 +34,8 @@ for i in *.dat; do
     install -m644 $i %buildroot%_datadir/%name/$i
 done
 
-%clean
-rm -Rf %{buildroot}
-
 %files
-%defattr(-, root, root)
 %doc COPYING README WHATSNEW
 %doc examples
 %{_bindir}/%name
 %{_datadir}/%name
-
-
