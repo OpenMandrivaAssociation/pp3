@@ -5,7 +5,7 @@ Release: 8
 License: MIT
 Group: Sciences/Astronomy
 Source0: http://prdownloads.sourceforge.net/pp3/pp3-%{version}.tar.bz2
-Url: http://pp3.sourceforge.net
+Url: https://pp3.sourceforge.net
 Patch0:	gcc47.patch
 
 %description
